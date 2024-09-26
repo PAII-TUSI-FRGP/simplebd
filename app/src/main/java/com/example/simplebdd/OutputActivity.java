@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.simplebdd.adaptadores.ListaContacosAdapter;
+import com.example.simplebdd.adaptadores.ListaContactosAdapter;
 import com.example.simplebdd.db.DbContactos;
 import com.example.simplebdd.entidades.Contactos;
 
@@ -32,7 +32,7 @@ public class OutputActivity extends AppCompatActivity {
         DbContactos dbContactos = new DbContactos(OutputActivity.this);
         listaArrayContactos = new ArrayList<>();
 
-        ListaContacosAdapter adapter = new ListaContacosAdapter(dbContactos.mostrarContactos());
+        ListaContactosAdapter adapter = new ListaContactosAdapter(dbContactos.mostrarContactos());
         listaContactos.setAdapter(adapter);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

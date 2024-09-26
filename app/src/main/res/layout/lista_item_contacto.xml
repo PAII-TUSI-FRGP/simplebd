@@ -12,7 +12,8 @@
         <TextView
             android:id="@+id/viewNombre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/viewTelefono"
@@ -21,6 +22,11 @@
 
         <TextView
             android:id="@+id/viewCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/viewSeparador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

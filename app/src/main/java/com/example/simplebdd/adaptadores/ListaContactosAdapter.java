@@ -13,11 +13,11 @@ import com.example.simplebdd.entidades.Contactos;
 
 import java.util.ArrayList;
 
-public class ListaContacosAdapter extends RecyclerView.Adapter<ListaContacosAdapter.ContactoViewHolder> {
+public class ListaContactosAdapter extends RecyclerView.Adapter<ListaContactosAdapter.ContactoViewHolder> {
 
     ArrayList<Contactos> listaContactos;
 
-    public ListaContacosAdapter(ArrayList<Contactos> listaContactos){
+    public ListaContactosAdapter(ArrayList<Contactos> listaContactos){
         this.listaContactos = listaContactos;
     }
     @NonNull

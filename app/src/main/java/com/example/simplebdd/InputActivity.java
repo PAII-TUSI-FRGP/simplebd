@@ -22,15 +22,10 @@ public class InputActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Toast.makeText(this, "in OnCreate", Toast.LENGTH_LONG).show();
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_input);
-
-        // Habilitar el botón de "volver" en la barra superior
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         txtNombre = findViewById(R.id.txtNombre);
         txtTelefono = findViewById(R.id.txtTelefono);
@@ -43,16 +38,6 @@ public class InputActivity extends AppCompatActivity {
         });
     }
 
-    // Sobrescribir onOptionsItemSelected para manejar el botón "volver"
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            // Al hacer clic en el botón "volver", regresa a la actividad anterior
-            onBackPressed();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     public void escribirBdd(View view){
         DbContactos dbContactos = new DbContactos(InputActivity.this);
@@ -62,7 +47,7 @@ public class InputActivity extends AppCompatActivity {
             Toast.makeText(this, "REGISTRO GUARDADO", Toast.LENGTH_SHORT).show();
             limpiar();
         }else{
-            Toast.makeText(this, "ERROR GUARDANDO REGISTRO", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ERROR GUARDANDO REGISTRO", Toast.LENGTH_LONG).show();
         }
     }
 
